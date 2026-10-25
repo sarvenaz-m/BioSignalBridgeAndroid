@@ -10,7 +10,7 @@ Android signal capture, event notes and local review, with a self-contained brow
 
 ![BioSignal Bridge: capture, inspect and revisit](docs/brand/BioSignalBridge.svg)
 
-[![Explore the offline workspace](docs/brand/open-workspace.svg)](demo/BioSignalBridge.html)
+[![Open live demo](docs/brand/open-workspace.svg)](https://sarvenaz-m.github.io/BioSignalBridgeAndroid/)
 
 The browser companion is a complete HTML file. Its public ECG recording, font and application code travel together.
 
