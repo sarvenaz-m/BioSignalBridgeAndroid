@@ -1,0 +1,133 @@
+{
+  "version": "1.0.0",
+  "environment": "Linux, JDK 17, Gradle 8.13; Android tests use Robolectric API 35",
+  "tests": 53,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "suites": [
+    {
+      "suite": "dev.sarvenaz.biosignalbridge.BridgeEngineTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "executedAt": "2026-10-15T14:34:15.533Z",
+      "cases": [
+        "previewRecordingSavesEverySampleAndExportsProvenance",
+        "liveRecordingUsesDeclaredRateAndRetainsInterleavedChannels",
+        "zoomIntoLongRecordingRetainsSamplesInTheVisibleWindow",
+        "processRestartMarksUnfinishedSessionsAsInterrupted",
+        "pausingPreviewKeepsRecordingOpenAndPreservesMarkerTime",
+        "overflowClosesRecordingAndKeepsCommittedSamplesVisible"
+      ]
+    },
+    {
+      "suite": "dev.sarvenaz.biosignalbridge.NativeJourneyTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "executedAt": "2026-10-15T14:34:26.237Z",
+      "cases": [
+        "zoomAndPauseKeepPreviewSeparateFromLiveAcquisition",
+        "nativeScreensShowTheRealPublicPreviewAndLocalWorkspace",
+        "aRecordedNotePassesThroughTheDialogAndRemainsWithTheSavedSession"
+      ]
+    },
+    {
+      "suite": "dev.sarvenaz.biosignalbridge.NativeUiControlTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "executedAt": "2026-10-15T14:34:35.383Z",
+      "cases": [
+        "markerDialogAcceptsNaturalTextAndSendsItOnce",
+        "liveChannelSelectionUsesTheDeclaredChannelAndRawUnit",
+        "seekAndTimeWindowControlsHaveIndependentCallbacks",
+        "sourceControlsRequestLiveWithoutClaimingAConnection",
+        "sessionDeletionRequiresAnExplicitConfirmation"
+      ]
+    },
+    {
+      "suite": "dev.sarvenaz.biosignalbridge.signal.ExportFixtureTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "executedAt": "2026-10-15T14:33:39.549Z",
+      "cases": [
+        "writesPortableNativePreviewRecordingForPython"
+      ]
+    },
+    {
+      "suite": "dev.sarvenaz.biosignalbridge.signal.SignalTest",
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "executedAt": "2026-10-15T14:33:39.741Z",
+      "cases": [
+        "exportUsesSessionRelativeTimeAndEscapesMarkerText",
+        "mixedChannelsMustBeDecimatedSeparately",
+        "exportRejectsUndeclaredChannel",
+        "decimationRetainsPeaksEndpointsAndGapWithinBudget",
+        "missingPacketMarksNextSampleInEveryObservedChannel",
+        "isolatedOldPacketCannotResetTime",
+        "sameSequenceAtRestartIsDuplicateUntilNextFrameEstablishesClock",
+        "sequenceWrapCountsOnlyMissingPackets",
+        "resetWithContinuingSequenceStartsNewMarkedSegment",
+        "resetCandidateCanBeConfirmedByConcurrentOtherChannel",
+        "malformedPacketDoesNotAdvanceSequence",
+        "alignmentPreservesIntervalsAndConcurrentChannels",
+        "duplicateAndDelayedPacketsAreNotDelivered",
+        "overlappingDeviceSamplesStartMarkedMonotonicSegment",
+        "resetWithForwardModularSequenceIsAcceptedWithoutInventingLoss",
+        "binaryPacketRoundTripsSignedSamplesAndUnsignedClock",
+        "deviceClockWrapPreservesIntervals",
+        "resetOfBothCountersRequiresTwoCoherentPackets",
+        "unusedSampleBytesMustBeZero",
+        "exportRejectsTimesBeforeSessionOrigin",
+        "malformedLengthSignatureVersionCountAndPeriodAreRejected",
+        "resetClearsConnectionStateAndStatistics"
+      ]
+    },
+    {
+      "suite": "dev.sarvenaz.biosignalbridge.storage.SampleBatchRulesTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "executedAt": "2026-10-15T14:33:42.657Z",
+      "cases": [
+        "rejectsTimeRegressionAcrossBatches",
+        "rejectsCrossSessionMeasurement",
+        "retainsAdcUnitWithoutInventingCalibration",
+        "allowsChannelsAtSameTimestamp",
+        "acceptsContinuousBatchAcrossWrites",
+        "rejectsNegativeQualityCounter",
+        "rejectsMissingStoredIndex"
+      ]
+    },
+    {
+      "suite": "dev.sarvenaz.biosignalbridge.storage.SessionRepositoryTest",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "executedAt": "2026-10-15T14:33:43.389Z",
+      "cases": [
+        "persistedSessionSurvivesDatabaseCloseAndReopen",
+        "storesQualityMetricsAndMarkersInTimeOrder",
+        "renameAndDeleteRequireEndedSessionAndDeleteCascades",
+        "completedSessionRejectsFurtherSamplesAndMarkers",
+        "sampleLimitRejectsNewBatchAndRetainsEverySavedMeasurement",
+        "interleavedChannelsRetainTheirOwnTimesAndMaximumDuration",
+        "commitsSamplesCountDurationAndGapTogether",
+        "rejectsWholeInvalidBatchWithoutChangingSavedCount",
+        "recoveryMarksOnlyUnfinishedSessionsAborted"
+      ]
+    }
+  ]
+}

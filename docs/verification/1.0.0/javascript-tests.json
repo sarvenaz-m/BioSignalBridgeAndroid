@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "tests": 26,
+  "passed": 26,
+  "failed": 0,
+  "coverage": "Packet codec, timing, counters, export and nine shared native processor fixtures"
+}

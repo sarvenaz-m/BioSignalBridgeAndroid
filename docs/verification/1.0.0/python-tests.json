@@ -1,0 +1,73 @@
+{
+  "version": "1.0.0",
+  "executedAt": "2026-10-15T14:40:20.575702+00:00",
+  "tests": 16,
+  "failures": 0,
+  "skipped": 0,
+  "cases": [
+    {
+      "name": "test_count_and_duration_must_match_companion_metadata",
+      "suite": "test_session_report.RecordingTests.test_count_and_duration_must_match_companion_metadata"
+    },
+    {
+      "name": "test_decreasing_channel_time_is_rejected",
+      "suite": "test_session_report.RecordingTests.test_decreasing_channel_time_is_rejected"
+    },
+    {
+      "name": "test_duplicate_marker_identifiers_are_rejected",
+      "suite": "test_session_report.RecordingTests.test_duplicate_marker_identifiers_are_rejected"
+    },
+    {
+      "name": "test_duplicate_timestamps_do_not_create_infinite_rate",
+      "suite": "test_session_report.RecordingTests.test_duplicate_timestamps_do_not_create_infinite_rate"
+    },
+    {
+      "name": "test_empty_recording_is_valid_without_invented_statistics",
+      "suite": "test_session_report.RecordingTests.test_empty_recording_is_valid_without_invented_statistics"
+    },
+    {
+      "name": "test_json_counters_must_be_numbers_and_oversized_csv_integers_are_rejected",
+      "suite": "test_session_report.RecordingTests.test_json_counters_must_be_numbers_and_oversized_csv_integers_are_rejected"
+    },
+    {
+      "name": "test_kotlin_preview_export_matches_public_sample_data",
+      "suite": "test_session_report.RecordingTests.test_kotlin_preview_export_matches_public_sample_data"
+    },
+    {
+      "name": "test_malformed_boolean_is_rejected",
+      "suite": "test_session_report.RecordingTests.test_malformed_boolean_is_rejected"
+    },
+    {
+      "name": "test_metadata_cap_and_exact_csv_header_remain_enforced",
+      "suite": "test_session_report.RecordingTests.test_metadata_cap_and_exact_csv_header_remain_enforced"
+    },
+    {
+      "name": "test_native_marker_capacity_with_long_unicode_labels_fits_metadata_budget",
+      "suite": "test_session_report.RecordingTests.test_native_marker_capacity_with_long_unicode_labels_fits_metadata_budget"
+    },
+    {
+      "name": "test_nonfinite_scale_and_boolean_time_are_rejected",
+      "suite": "test_session_report.RecordingTests.test_nonfinite_scale_and_boolean_time_are_rejected"
+    },
+    {
+      "name": "test_other_session_cannot_be_mixed_in",
+      "suite": "test_session_report.RecordingTests.test_other_session_cannot_be_mixed_in"
+    },
+    {
+      "name": "test_scales_values_and_excludes_gap_from_rate",
+      "suite": "test_session_report.RecordingTests.test_scales_values_and_excludes_gap_from_rate"
+    },
+    {
+      "name": "test_sequence_and_tick_wrap_are_valid_unsigned_values",
+      "suite": "test_session_report.RecordingTests.test_sequence_and_tick_wrap_are_valid_unsigned_values"
+    },
+    {
+      "name": "test_simultaneous_channels_use_their_own_time_order",
+      "suite": "test_session_report.RecordingTests.test_simultaneous_channels_use_their_own_time_order"
+    },
+    {
+      "name": "test_undeclared_channel_is_rejected",
+      "suite": "test_session_report.RecordingTests.test_undeclared_channel_is_rejected"
+    }
+  ]
+}

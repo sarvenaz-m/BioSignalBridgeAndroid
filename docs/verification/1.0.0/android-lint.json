@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "errors": 0,
+  "warnings": 3,
+  "issues": [
+    {
+      "id": "AndroidGradlePluginVersion",
+      "severity": "Warning",
+      "message": "A newer version of com.android.library than 8.13.2 is available: 9.4.1"
+    },
+    {
+      "id": "NewerVersionAvailable",
+      "severity": "Warning",
+      "message": "A newer version of com.google.dagger:hilt-compiler than 2.58 is available: 2.60.1"
+    },
+    {
+      "id": "NewerVersionAvailable",
+      "severity": "Warning",
+      "message": "A newer version of org.robolectric:robolectric than 4.16.1 is available: 4.17"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "biosignal-bridge.session/v1",
+  "sessionId": "native-preview-reference",
+  "source": "PREVIEW",
+  "startedAtEpochMs": 1760000000000,
+  "timeUnit": "ns",
+  "originNs": 0,
+  "sampleCount": 3000,
+  "durationNs": 11996000000,
+  "channels": [
+    {"id": 0, "name": "ECG · MLII", "unit": "mV", "scalePerCount": 0.005}
+  ],
+  "markers": [
+    {"id": "review-midpoint", "timeNs": 6000000000, "label": "Review midpoint"}
+  ],
+  "stats": {
+    "receivedPackets": 750,
+    "acceptedPackets": 750,
+    "malformedPackets": 0,
+    "lostPackets": 0,
+    "duplicatePackets": 0,
+    "outOfOrderPackets": 0,
+    "clockResets": 0
+  }
+}

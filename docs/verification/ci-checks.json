@@ -1,0 +1,73 @@
+{
+  "release": "1.1.0",
+  "checkedOn": "2026-10-25",
+  "scope": "Android SDK setup, Kotlin language attributes and browser accessibility correction",
+  "repository": "sarvenaz-m/BioSignalBridgeAndroid",
+  "baselineCommit": "c41c91b89f20ffe6588d2e14d4398d8bc0b85445",
+  "androidSdkSetup": {
+    "action": "android-actions/setup-android@be39fa834029ff78f1a44aa3bb0819b8fc2bd8fd",
+    "commandLineToolsBuild": "12266719",
+    "commandLineToolsVersion": "16.0",
+    "javaVersion": 17,
+    "testedWithEmptySdkDirectory": true,
+    "setupExitCode": 0,
+    "exportedPathResolvedSdkmanager": true,
+    "platform36JarPresent": true,
+    "buildTools36Aapt2Executable": true,
+    "packageVerificationExitCode": 0
+  },
+  "workflow": {
+    "actionlintVersion": "1.7.12",
+    "actionlintErrors": 0,
+    "embeddedBashSyntaxPassed": true,
+    "allActionsPinnedToCommit": true,
+    "sdkSetupPrecedesGradleCaching": true,
+    "observedHostedRunId": 40172509225,
+    "observedHostedSteps": {
+      "androidSdkSetup": "success",
+      "androidTestsBuildAndLint": "success",
+      "pythonInteroperability": "success",
+      "javascriptTests": "success",
+      "offlineDemoBuild": "success",
+      "browserBeforeCorrection": "failure"
+    }
+  },
+  "languageAttributes": {
+    "checkedWith": "git check-attr",
+    "retainedKotlinFiles": 40,
+    "retainedKotlinBytes": 214907,
+    "supportingProgrammingFilesExcluded": true,
+    "gradleWrapperLfPreserved": true,
+    "windowsWrapperCrlfPreserved": true
+  },
+  "rerunTests": {
+    "javascriptPassed": 42,
+    "pythonPassed": 16,
+    "failed": 0
+  },
+  "nativeApplicationSourceChanged": false,
+  "previewApkChanged": false,
+  "notRerun": [
+    "Local native compilation, native tests and Android lint",
+    "Complete hosted GitHub Actions workflow with the final browser correction"
+  ],
+  "browserCorrection": {
+    "reproducedFailureBeforeFix": {
+      "rule": "aria-prohibited-attr",
+      "target": ".overview-track"
+    },
+    "overviewRole": "img",
+    "windowMeasurementsRole": "group",
+    "packetHistoryRole": "group",
+    "playwrightVersion": "1.51.1",
+    "chromiumVersion": "134.0.6998.35",
+    "checksPassed": 38,
+    "accessibilityStatesPassed": 16,
+    "accessibilityViolations": 0,
+    "pageErrors": 0,
+    "externalRuntimeRequests": 0,
+    "accessibilityRulesDisabled": false,
+    "report": "browser-tests.json"
+  },
+  "offlineDemoCopiesMatch": true
+}

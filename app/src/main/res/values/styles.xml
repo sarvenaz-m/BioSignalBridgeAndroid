@@ -1,0 +1,10 @@
+<resources>
+    <style name="Theme.BioSignalBridge.Base" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">#18233F</item>
+        <item name="android:navigationBarColor">#18233F</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+    <style name="Theme.BioSignalBridge" parent="Theme.BioSignalBridge.Base" />
+</resources>

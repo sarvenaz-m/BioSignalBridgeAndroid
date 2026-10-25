@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testcase name="20-byte binary frame preserves signed samples and little endian fields" time="0.001992" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="wrong magic, version and size are rejected" time="0.000260" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="unused sample bytes must be zero" time="0.000134" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="period zero and invalid sample counts rejected" time="0.000160" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="encoder validates raw values and channel bounds" time="0.000178" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="sample sequence and clock wrap remain monotonic" time="0.000159" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="clean scenario has twelve accepted packets and no faults" time="0.000306" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="missing packets counted once and mark next sample gap" time="0.000198" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="duplicate packet omitted from samples" time="0.000435" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="out-of-order delayed packet never rewinds samples" time="0.000528" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="two coherent packets confirm a reset of both counters" time="0.001053" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="malformed frame never emits samples" time="0.000197" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="public preview has 3000 calibrated samples and measured packet counts" time="0.004714" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="CSV uses exact analysis header, relative nanoseconds and raw integers" time="0.000182" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="metadata carries source, channel calibration, packet stats and marker time" time="0.000852" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="SVG trace starts a new path after a flagged gap" time="0.000259" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="marker validation retains text and rejects blank or excessive input" time="0.000229" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="native/browser parity: clean" time="0.002257" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="native/browser parity: loss" time="0.000545" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="native/browser parity: duplicate" time="0.000134" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="native/browser parity: reorder" time="0.000113" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="native/browser parity: clock_and_sequence_wrap" time="0.000152" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="native/browser parity: confirmed_reset" time="0.000214" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="native/browser parity: discarded_reset_candidate" time="0.000117" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="native/browser parity: forward_modular_reset" time="0.000162" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="native/browser parity: same_sequence_reset" time="0.000099" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/domain.test.mjs"/>
+	<testcase name="empty inspection preserves absence of measurements" time="0.000957" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/inspection.test.mjs"/>
+	<testcase name="known calibrated signal has correct moments and timing" time="0.000214" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/inspection.test.mjs"/>
+	<testcase name="gaps and interleaved channels do not corrupt the rate" time="0.000207" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/inspection.test.mjs"/>
+	<testcase name="equal timestamps are reported without inventing an infinite rate" time="0.000211" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/inspection.test.mjs"/>
+	<testcase name="negative calibration preserves ordered amplitudes and rail counts" time="0.000138" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/inspection.test.mjs"/>
+	<testcase name="large finite scales do not overflow intermediate squares" time="0.000114" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/inspection.test.mjs"/>
+	<testcase name="window bounds exclude neighbouring measurements" time="0.000102" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/inspection.test.mjs"/>
+	<testcase name="invalid channel timing and values are rejected" time="0.000320" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/inspection.test.mjs"/>
+	<testcase name="session search includes event notes and leaves the library unchanged" time="0.007424" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/inspection.test.mjs"/>
+	<testcase name="session names accept ordinary Unicode and reject empty or oversized input" time="0.000320" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/inspection.test.mjs"/>
+	<testcase name="offline bundle boots with a waveform, overview and measured window" time="0.055348" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/workspace.test.mjs"/>
+	<testcase name="all four destinations render without a browser service" time="0.034030" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/workspace.test.mjs"/>
+	<testcase name="save, rename, search, review and delete retain a coherent local session" time="0.064228" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/workspace.test.mjs"/>
+	<testcase name="an unavailable recording database is visible and never claims to save" time="0.020144" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/workspace.test.mjs"/>
+	<testcase name="keyboard help opens a labelled list and closes cleanly" time="0.021677" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/workspace.test.mjs"/>
+	<testcase name="monitor keyboard controls move playback and keep dialog input separate" time="0.021864" classname="test" file="/workspace/scratch/f595402f36af/project/BioSignalBridge/demo/tests/workspace.test.mjs"/>
+	<!-- tests 42 -->
+	<!-- suites 0 -->
+	<!-- pass 42 -->
+	<!-- fail 0 -->
+	<!-- cancelled 0 -->
+	<!-- skipped 0 -->
+	<!-- todo 0 -->
+	<!-- duration_ms 420.02321 -->
+</testsuites>

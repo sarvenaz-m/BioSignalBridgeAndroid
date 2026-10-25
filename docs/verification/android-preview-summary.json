@@ -1,0 +1,45 @@
+{
+  "schema": "biosignal-bridge.analysis/v1",
+  "session_id": "5d24bdc7-9eaf-41ec-9e08-43ae0b6eb102",
+  "source": "PREVIEW",
+  "duration_seconds": 11.996,
+  "sample_count": 3000,
+  "marker_count": 0,
+  "packet_counters": {
+    "receivedPackets": 750,
+    "acceptedPackets": 750,
+    "malformedPackets": 0,
+    "lostPackets": 0,
+    "duplicatePackets": 0,
+    "outOfOrderPackets": 0,
+    "clockResets": 0,
+    "overflowPackets": 0
+  },
+  "channels": [
+    {
+      "id": 0,
+      "name": "ECG \u00b7 MLII",
+      "unit": "mV",
+      "sample_count": 3000,
+      "span_seconds": 11.996,
+      "median_interval_ms": 4.0,
+      "estimated_rate_hz": 250.0,
+      "minimum": -0.645,
+      "maximum": 0.935,
+      "mean": -0.31769833333333336,
+      "rms": 0.35861849506125587,
+      "population_stddev": 0.1663580295543988,
+      "observed_rate_hz": 250.0,
+      "interval_jitter_us": 0.0,
+      "adc_rail_samples": 0,
+      "gap_markers": 0,
+      "segment_count": 1,
+      "duplicate_timestamps": 0
+    }
+  ],
+  "notes": [
+    "Rates exclude intervals across marked gaps.",
+    "Lost packet counts do not imply an exact missing sample count.",
+    "Values use the scale stored in the session metadata."
+  ]
+}

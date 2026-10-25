@@ -1,0 +1,114 @@
+{
+  "executedAt": "2026-10-25T07:37:30.710Z",
+  "browser": "Chromium 134 / Playwright 1.51.1",
+  "checks": [
+    "real public ECG loads without network data",
+    "desktop Monitor accessibility and layout",
+    "time zoom redraws calibrated waveform",
+    "seek moves playhead to precise time",
+    "playback advances and pause retains playhead",
+    "event marker stores current time",
+    "event marker can be renamed",
+    "loss scenario computes exact packet counters",
+    "clock reset requires coherent packets",
+    "session samples and markers stored in actual IndexedDB",
+    "CSV export has exact Python-friendly columns and relative nanoseconds",
+    "metadata preserves provenance calibration and real session counters",
+    "saved session survives page reload",
+    "desktop Sessions accessibility and layout",
+    "session review restores waveform and markers",
+    "active capture prevents seeking and marker editing cannot move its timeline",
+    "short recording saves only the played preview samples",
+    "opening a saved session finishes active preview capture before changing the source",
+    "desktop Devices accessibility and layout",
+    "browser clearly separates protocol information from native BLE",
+    "desktop Settings accessibility and layout",
+    "settings are local and source boundaries visible",
+    "320px Monitor accessibility and layout",
+    "320px Sessions accessibility and layout",
+    "320px Devices accessibility and layout",
+    "320px Settings accessibility and layout",
+    "390px Monitor accessibility and layout",
+    "390px Sessions accessibility and layout",
+    "390px Devices accessibility and layout",
+    "390px Settings accessibility and layout",
+    "768px Monitor accessibility and layout",
+    "768px Sessions accessibility and layout",
+    "768px Devices accessibility and layout",
+    "768px Settings accessibility and layout",
+    "recording deletion requires a concrete dialog and updates IndexedDB",
+    "unavailable IndexedDB leaves playback usable and gives a clear save message",
+    "standalone file opens offline",
+    "no page errors or external runtime requests"
+  ],
+  "checkCount": 38,
+  "audits": [
+    {
+      "name": "desktop Monitor",
+      "violations": []
+    },
+    {
+      "name": "desktop Sessions",
+      "violations": []
+    },
+    {
+      "name": "desktop Devices",
+      "violations": []
+    },
+    {
+      "name": "desktop Settings",
+      "violations": []
+    },
+    {
+      "name": "320px Monitor",
+      "violations": []
+    },
+    {
+      "name": "320px Sessions",
+      "violations": []
+    },
+    {
+      "name": "320px Devices",
+      "violations": []
+    },
+    {
+      "name": "320px Settings",
+      "violations": []
+    },
+    {
+      "name": "390px Monitor",
+      "violations": []
+    },
+    {
+      "name": "390px Sessions",
+      "violations": []
+    },
+    {
+      "name": "390px Devices",
+      "violations": []
+    },
+    {
+      "name": "390px Settings",
+      "violations": []
+    },
+    {
+      "name": "768px Monitor",
+      "violations": []
+    },
+    {
+      "name": "768px Sessions",
+      "violations": []
+    },
+    {
+      "name": "768px Devices",
+      "violations": []
+    },
+    {
+      "name": "768px Settings",
+      "violations": []
+    }
+  ],
+  "assertions": "Interactions, actual IndexedDB persistence, exact exports, WCAG 2.1 AA axe checks and horizontal layout at 320, 390, 768 and 1440 px",
+  "pageErrors": [],
+  "externalRequests": []
+}

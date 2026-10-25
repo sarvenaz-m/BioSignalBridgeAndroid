@@ -1,0 +1,36 @@
+{
+  "dataset": "MIT-BIH Arrhythmia Database",
+  "version": "1.0.0",
+  "doi": "10.13026/C2F305",
+  "record": "100",
+  "channel": "MLII",
+  "sourceRateHz": 360,
+  "sampleRateHz": 250,
+  "durationSeconds": 12,
+  "count": 3000,
+  "gainCountsPerMv": 200,
+  "adcZero": 1024,
+  "license": "Open Data Commons Attribution License v1.0",
+  "sourceFiles": [
+    {
+      "name": "100.dat",
+      "url": "https://physionet.org/files/mitdb/1.0.0/100.dat",
+      "sha256": "b2ea3c250e56e48f4b7b90697832b8ecd1afa1e0bb31f2dcfea4ed6e1075a639"
+    },
+    {
+      "name": "100.hea",
+      "url": "https://physionet.org/files/mitdb/1.0.0/100.hea",
+      "sha256": "60ebc904c7bf3e04d142638d3fd5c903e8dc9f10f1ea3264e07926aa089ee75e"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "preview.json",
+      "sha256": "08b70a9cc9a78fb62deff67c3e915149c5f5768b69c63c0b84520bbdfd427732"
+    },
+    {
+      "name": "preview_ecg.csv",
+      "sha256": "06c89d5633ccade6db5be83c6b618cdac7a3012fe75610c5763c1182da018bc8"
+    }
+  ]
+}

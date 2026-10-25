@@ -1,0 +1,32 @@
+# Keep source line endings consistent across platforms.
+* text=auto
+*.kt text eol=lf linguist-language=Kotlin linguist-detectable=true
+*.kts text eol=lf linguist-language=Kotlin linguist-detectable=true
+*.sh text eol=lf
+/gradlew text eol=lf linguist-generated=true
+*.bat text eol=crlf
+/gradlew.bat linguist-generated=true
+*.csv text eol=lf
+*.png binary
+*.ttf binary
+*.jar binary
+*.apk binary
+*.zip binary
+
+# Focus language totals on the native Kotlin implementation.
+# The companion, recording tools and public data stay outside those totals.
+/index.html linguist-generated=true
+/demo/** -linguist-detectable
+/analysis/** -linguist-detectable
+/data/** -linguist-detectable
+/scripts/** -linguist-detectable
+/tests/** -linguist-detectable
+/.github/** -linguist-detectable
+/docs/** linguist-documentation=true
+
+# Exclude generated output and bundled dependencies.
+/gradle/wrapper/** linguist-generated=true
+/third_party/** linguist-vendored=true
+**/node_modules/** linguist-vendored=true
+**/build/** linguist-generated=true
+**/dist/** linguist-generated=true

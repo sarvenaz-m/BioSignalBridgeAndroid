@@ -1,0 +1,6 @@
+<resources>
+    <style name="Theme.BioSignalBridge" parent="Theme.BioSignalBridge.Base">
+        <item name="android:navigationBarColor">#F4F5FA</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

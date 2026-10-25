@@ -1,0 +1,578 @@
+{
+  "schema": "biosignal-bridge.processor-fixtures/v1",
+  "scenarios": [
+    {
+      "name": "clean",
+      "frames": [
+        {
+          "packet": {
+            "sequence": 0,
+            "tickUs": 0,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 2000000
+        },
+        {
+          "packet": {
+            "sequence": 1,
+            "tickUs": 2000,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 4000000
+        },
+        {
+          "packet": {
+            "sequence": 2,
+            "tickUs": 4000,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 6000000
+        }
+      ],
+      "expectedStatuses": [
+        "ACCEPTED",
+        "ACCEPTED",
+        "ACCEPTED"
+      ],
+      "expectedStats": {
+        "receivedPackets": 3,
+        "acceptedPackets": 3,
+        "malformedPackets": 0,
+        "lostPackets": 0,
+        "duplicatePackets": 0,
+        "outOfOrderPackets": 0,
+        "clockResets": 0
+      },
+      "expectedSampleTimeNs": [
+        1000000,
+        2000000,
+        3000000,
+        4000000,
+        5000000,
+        6000000
+      ],
+      "expectedGapIndices": []
+    },
+    {
+      "name": "loss",
+      "frames": [
+        {
+          "packet": {
+            "sequence": 10,
+            "tickUs": 0,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 2000000
+        },
+        {
+          "packet": {
+            "sequence": 13,
+            "tickUs": 6000,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 8000000
+        }
+      ],
+      "expectedStatuses": [
+        "ACCEPTED",
+        "ACCEPTED"
+      ],
+      "expectedStats": {
+        "receivedPackets": 2,
+        "acceptedPackets": 2,
+        "malformedPackets": 0,
+        "lostPackets": 2,
+        "duplicatePackets": 0,
+        "outOfOrderPackets": 0,
+        "clockResets": 0
+      },
+      "expectedSampleTimeNs": [
+        1000000,
+        2000000,
+        7000000,
+        8000000
+      ],
+      "expectedGapIndices": [
+        2
+      ]
+    },
+    {
+      "name": "duplicate",
+      "frames": [
+        {
+          "packet": {
+            "sequence": 0,
+            "tickUs": 0,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 2000000
+        },
+        {
+          "packet": {
+            "sequence": 0,
+            "tickUs": 0,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 3000000
+        },
+        {
+          "packet": {
+            "sequence": 1,
+            "tickUs": 2000,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 4000000
+        }
+      ],
+      "expectedStatuses": [
+        "ACCEPTED",
+        "DUPLICATE",
+        "ACCEPTED"
+      ],
+      "expectedStats": {
+        "receivedPackets": 3,
+        "acceptedPackets": 2,
+        "malformedPackets": 0,
+        "lostPackets": 0,
+        "duplicatePackets": 1,
+        "outOfOrderPackets": 0,
+        "clockResets": 0
+      },
+      "expectedSampleTimeNs": [
+        1000000,
+        2000000,
+        3000000,
+        4000000
+      ],
+      "expectedGapIndices": []
+    },
+    {
+      "name": "reorder",
+      "frames": [
+        {
+          "packet": {
+            "sequence": 1,
+            "tickUs": 0,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 100000000
+        },
+        {
+          "packet": {
+            "sequence": 3,
+            "tickUs": 4000,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 104000000
+        },
+        {
+          "packet": {
+            "sequence": 2,
+            "tickUs": 2000,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 105000000
+        },
+        {
+          "packet": {
+            "sequence": 4,
+            "tickUs": 6000,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 106000000
+        }
+      ],
+      "expectedStatuses": [
+        "ACCEPTED",
+        "ACCEPTED",
+        "OUT_OF_ORDER",
+        "ACCEPTED"
+      ],
+      "expectedStats": {
+        "receivedPackets": 4,
+        "acceptedPackets": 3,
+        "malformedPackets": 0,
+        "lostPackets": 1,
+        "duplicatePackets": 0,
+        "outOfOrderPackets": 1,
+        "clockResets": 0
+      },
+      "expectedSampleTimeNs": [
+        99000000,
+        100000000,
+        103000000,
+        104000000,
+        105000000,
+        106000000
+      ],
+      "expectedGapIndices": [
+        2
+      ]
+    },
+    {
+      "name": "clock_and_sequence_wrap",
+      "frames": [
+        {
+          "packet": {
+            "sequence": 65535,
+            "tickUs": 4294967040,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 100000000
+        },
+        {
+          "packet": {
+            "sequence": 0,
+            "tickUs": 1744,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 102000000
+        }
+      ],
+      "expectedStatuses": [
+        "ACCEPTED",
+        "ACCEPTED"
+      ],
+      "expectedStats": {
+        "receivedPackets": 2,
+        "acceptedPackets": 2,
+        "malformedPackets": 0,
+        "lostPackets": 0,
+        "duplicatePackets": 0,
+        "outOfOrderPackets": 0,
+        "clockResets": 0
+      },
+      "expectedSampleTimeNs": [
+        99000000,
+        100000000,
+        101000000,
+        102000000
+      ],
+      "expectedGapIndices": []
+    },
+    {
+      "name": "confirmed_reset",
+      "frames": [
+        {
+          "packet": {
+            "sequence": 500,
+            "tickUs": 8000000,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 100000000
+        },
+        {
+          "packet": {
+            "sequence": 0,
+            "tickUs": 0,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 110000000
+        },
+        {
+          "packet": {
+            "sequence": 1,
+            "tickUs": 2000,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 112000000
+        }
+      ],
+      "expectedStatuses": [
+        "ACCEPTED",
+        "CLOCK_RESET_PENDING",
+        "ACCEPTED"
+      ],
+      "expectedStats": {
+        "receivedPackets": 3,
+        "acceptedPackets": 3,
+        "malformedPackets": 0,
+        "lostPackets": 0,
+        "duplicatePackets": 0,
+        "outOfOrderPackets": 0,
+        "clockResets": 1
+      },
+      "expectedSampleTimeNs": [
+        99000000,
+        100000000,
+        109000000,
+        110000000,
+        111000000,
+        112000000
+      ],
+      "expectedGapIndices": [
+        2
+      ]
+    },
+    {
+      "name": "discarded_reset_candidate",
+      "frames": [
+        {
+          "packet": {
+            "sequence": 500,
+            "tickUs": 8000000,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 100000000
+        },
+        {
+          "packet": {
+            "sequence": 0,
+            "tickUs": 0,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 110000000
+        },
+        {
+          "packet": {
+            "sequence": 501,
+            "tickUs": 8002000,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 112000000
+        }
+      ],
+      "expectedStatuses": [
+        "ACCEPTED",
+        "CLOCK_RESET_PENDING",
+        "ACCEPTED"
+      ],
+      "expectedStats": {
+        "receivedPackets": 3,
+        "acceptedPackets": 2,
+        "malformedPackets": 0,
+        "lostPackets": 0,
+        "duplicatePackets": 0,
+        "outOfOrderPackets": 1,
+        "clockResets": 0
+      },
+      "expectedSampleTimeNs": [
+        99000000,
+        100000000,
+        101000000,
+        102000000
+      ],
+      "expectedGapIndices": []
+    },
+    {
+      "name": "forward_modular_reset",
+      "frames": [
+        {
+          "packet": {
+            "sequence": 50000,
+            "tickUs": 8000000,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 100000000
+        },
+        {
+          "packet": {
+            "sequence": 0,
+            "tickUs": 0,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 110000000
+        }
+      ],
+      "expectedStatuses": [
+        "ACCEPTED",
+        "ACCEPTED"
+      ],
+      "expectedStats": {
+        "receivedPackets": 2,
+        "acceptedPackets": 2,
+        "malformedPackets": 0,
+        "lostPackets": 0,
+        "duplicatePackets": 0,
+        "outOfOrderPackets": 0,
+        "clockResets": 1
+      },
+      "expectedSampleTimeNs": [
+        99000000,
+        100000000,
+        109000000,
+        110000000
+      ],
+      "expectedGapIndices": [
+        2
+      ]
+    },
+    {
+      "name": "same_sequence_reset",
+      "frames": [
+        {
+          "packet": {
+            "sequence": 0,
+            "tickUs": 8000000,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 100000000
+        },
+        {
+          "packet": {
+            "sequence": 0,
+            "tickUs": 0,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 110000000
+        },
+        {
+          "packet": {
+            "sequence": 1,
+            "tickUs": 2000,
+            "periodUs": 1000,
+            "channel": 0,
+            "samples": [
+              10,
+              -10
+            ]
+          },
+          "hostTimeNs": 112000000
+        }
+      ],
+      "expectedStatuses": [
+        "ACCEPTED",
+        "DUPLICATE",
+        "ACCEPTED"
+      ],
+      "expectedStats": {
+        "receivedPackets": 3,
+        "acceptedPackets": 2,
+        "malformedPackets": 0,
+        "lostPackets": 0,
+        "duplicatePackets": 1,
+        "outOfOrderPackets": 0,
+        "clockResets": 1
+      },
+      "expectedSampleTimeNs": [
+        99000000,
+        100000000,
+        111000000,
+        112000000
+      ],
+      "expectedGapIndices": [
+        2
+      ]
+    }
+  ]
+}

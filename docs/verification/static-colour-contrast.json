@@ -1,0 +1,53 @@
+{
+  "scope": "Selected static text-colour pairs, not a full accessibility audit",
+  "results": [
+    {
+      "label": "Body text",
+      "foreground": "#202b45",
+      "background": "#f4f5fa",
+      "ratio": 12.92,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "label": "Supporting text",
+      "foreground": "#606a80",
+      "background": "#ffffff",
+      "ratio": 5.43,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "label": "Primary action",
+      "foreground": "#ffffff",
+      "background": "#5646c8",
+      "ratio": 6.76,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "label": "Instrument text",
+      "foreground": "#b6c8ff",
+      "background": "#18233f",
+      "ratio": 9.4,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "label": "Source label",
+      "foreground": "#5143a6",
+      "background": "#eee9fc",
+      "ratio": 6.55,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "label": "Source eyebrow",
+      "foreground": "#5b5d8e",
+      "background": "#eeecfa",
+      "ratio": 5.3,
+      "threshold": 4.5,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "version": "1.0.0",
+  "applicationId": "dev.sarvenaz.biosignalbridge",
+  "minSdk": 26,
+  "targetSdk": 36,
+  "debuggable": false,
+  "variant": "preview",
+  "signing": "Development certificate; release code and resource shrinking enabled",
+  "sha256": "b7fa432367c903b7401ebf6ee38a4d5310bc415510dbe320912014c956f2488b",
+  "sizeBytes": 1722104,
+  "signatureVerification": [
+    "Verifies",
+    "Verified using v1 scheme (JAR signing): false",
+    "Verified using v2 scheme (APK Signature Scheme v2): true",
+    "Verified using v3 scheme (APK Signature Scheme v3): false",
+    "Verified using v3.1 scheme (APK Signature Scheme v3.1): false",
+    "Verified using v4 scheme (APK Signature Scheme v4): false",
+    "Verified for SourceStamp: false",
+    "Number of signers: 1",
+    "Signer #1 certificate DN: C=US, O=Android, CN=Android Debug",
+    "Signer #1 certificate SHA-256 digest: 246be2736378c53bf86502793041c46b5f73938a2cf1f5af908f728a30c458de",
+    "Signer #1 certificate SHA-1 digest: 7a6c904895c8feab45015e57150181ce8640d33d",
+    "Signer #1 certificate MD5 digest: 921e9a850cf6365c26be0b2182aca59d",
+    "Signer #1 key algorithm: RSA",
+    "Signer #1 key size (bits): 2048",
+    "Signer #1 public key SHA-256 digest: cc8141ea8a7e8068989a24e1824b0cd03e7e399bbecdff55ec8d728a73b717dc",
+    "Signer #1 public key SHA-1 digest: b8f39d07494fabcd641de84bfb5364673a972f7a",
+    "Signer #1 public key MD5 digest: acfcf2ba22ec26a4a5b80d525f6eed58"
+  ],
+  "zipAlignment16KiB": true,
+  "nativeLibraries": [
+    {
+      "path": "lib/arm64-v8a/libandroidx.graphics.path.so",
+      "bits": 64,
+      "loadSegmentAlignmentBytes": [
+        16384,
+        16384,
+        16384
+      ]
+    },
+    {
+      "path": "lib/arm64-v8a/libdatastore_shared_counter.so",
+      "bits": 64,
+      "loadSegmentAlignmentBytes": [
+        16384,
+        16384,
+        16384,
+        16384
+      ]
+    },
+    {
+      "path": "lib/armeabi-v7a/libandroidx.graphics.path.so",
+      "bits": 32,
+      "loadSegmentAlignmentBytes": [
+        16384,
+        16384,
+        16384
+      ]
+    },
+    {
+      "path": "lib/armeabi-v7a/libdatastore_shared_counter.so",
+      "bits": 32,
+      "loadSegmentAlignmentBytes": [
+        16384,
+        16384,
+        16384,
+        16384
+      ]
+    },
+    {
+      "path": "lib/x86/libandroidx.graphics.path.so",
+      "bits": 32,
+      "loadSegmentAlignmentBytes": [
+        16384,
+        16384,
+        16384
+      ]
+    },
+    {
+      "path": "lib/x86/libdatastore_shared_counter.so",
+      "bits": 32,
+      "loadSegmentAlignmentBytes": [
+        16384,
+        16384,
+        16384,
+        16384
+      ]
+    },
+    {
+      "path": "lib/x86_64/libandroidx.graphics.path.so",
+      "bits": 64,
+      "loadSegmentAlignmentBytes": [
+        16384,
+        16384,
+        16384
+      ]
+    },
+    {
+      "path": "lib/x86_64/libdatastore_shared_counter.so",
+      "bits": 64,
+      "loadSegmentAlignmentBytes": [
+        16384,
+        16384,
+        16384,
+        16384
+      ]
+    }
+  ]
+}
